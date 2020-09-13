@@ -1,0 +1,54 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'cs-operating-systems'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=cs-operating-systems",
+                    "--package=cs-operating-systems"
+                ],
+                "filter": {
+                    "name": "cs-operating-systems",
+                    "kind": "bin"
+                }
+            },
+            
+            "args": [
+                "-1",
+                "hello",
+                "-2",
+                "mom",
+                "-d",
+                "./path"
+            ],
+            "cwd": "${workspaceFolder}",
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'cs-operating-systems'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=cs-operating-systems",
+                    "--package=cs-operating-systems"
+                ],
+                "filter": {
+                    "name": "cs-operating-systems",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
